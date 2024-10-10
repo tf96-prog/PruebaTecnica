@@ -1,0 +1,19 @@
+
+
+<ion-content [fullscreen]="true">
+  <app-header> </app-header>
+  <div class="content">
+    <form (keyup.enter)="submit()" (ngSubmit)="submit()">
+      <app-input [control]="form.controls.email" type="email" label="correo"></app-input>
+      <app-input [control]="form.controls.password" type="password" label="contrasenia"></app-input>
+      <ion-button [disabled]="form.invalid" type="submit">
+        Acceder
+      </ion-button>
+      <div>
+        <ion-button>
+          Registrarse
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

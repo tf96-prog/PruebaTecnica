@@ -1,0 +1,8 @@
+<ion-item *ngIf="type !=='textarea'">
+  <ion-label>{{label}}</ion-label>
+  <ion-input [type]="type" [formcontrol]="control"></ion-input>
+</ion-item>
+<ion-item *ngIf="type== 'textarea'">
+  <ion-label>{{label}}</ion-label>
+  <ion-textarea auto-grow="true"></ion-textarea>
+</ion-item>

@@ -1,0 +1,13 @@
+<ion-content>
+  <app-header [isModal]="true" title="Tarea"></app-header>
+  <app-input [control]="form.controls.titulo" type="text" label="Titulo"></app-input>
+  <div **ngIf="form.controls.titulo.errors && form.controls.titulo.dirty">
+    <div *ngIf="form.controls.titulo.errors?.['required']">Campo requirido</div>
+    <div *ngIf="form.controls.titulo.errors?.['minLength']">Campo con minmo 4 caracteres</div>
+  </div>
+  <app-input [control]="form.controls.descripcion" type="textarea" label="Descripcion"></app-input>
+  <div **ngIf="form.controls.titulo.errors && form.controls.descripcion.dirty">
+    <div *ngIf="form.controls.descripcion.errors?.['required']">Campo requirido</div>
+    <div *ngIf="form.controls.descripcion.errors?.['minLength']">Campo con minmo 4 caracteres</div>
+  </div>
+</ion-content>
